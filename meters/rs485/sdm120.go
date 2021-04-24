@@ -16,23 +16,23 @@ type SDM120Producer struct {
 
 func NewSDM120Producer() Producer {
 	/**
-	 * Opcodes as defined by Eastron SDM230.
-	 * See https://bg-etech.de/download/manual/SDM230-register.pdf
+	 * Opcodes as defined by Eastron SDM120.
+	 * See https://bg-etech.de/download/manual/SDM120-register.pdf
 	 */
 	ops := Opcodes{
-		Voltage:        0x0000, // 220, 230
-		Current:        0x0006, // 220, 230
-		Power:          0x000C, //      230
-		Import:         0x0048, // 220, 230
-		Export:         0x004a, // 220, 230
-		Cosphi:         0x001e, //      230
-		Frequency:      0x0046, //      230
-		ReactiveImport: 0x4C,   // 220, 230
-		ReactiveExport: 0x4E,   // 220, 230
-		ApparentPower:  0x0012, // 230
-		ReactivePower:  0x0018, // 230
-		Sum:            0x0156, // 230
-		PhaseAngle:     0x0024, // 230
+		Voltage:        0x0000,
+		Current:        0x0006,
+		Power:          0x000C,
+		ApparentPower:  0x0012,
+		ReactivePower:  0x0018,
+		Cosphi:         0x001E,
+		Frequency:      0x0046,
+		Import:         0x0048,
+		Export:         0x004A,
+		ReactiveImport: 0x004C,
+		ReactiveExport: 0x004E,
+		Sum:            0x0156,
+		ReactiveSum:    0x0158,
 	}
 	return &SDM120Producer{Opcodes: ops}
 }
