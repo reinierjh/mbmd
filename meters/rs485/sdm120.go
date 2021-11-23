@@ -26,6 +26,7 @@ func NewSDM120Producer() Producer {
 		ApparentPower:  0x0012,
 		ReactivePower:  0x0018,
 		Cosphi:         0x001E,
+		PhaseAngle:     0x0024,
 		Frequency:      0x0046,
 		Import:         0x0048,
 		Export:         0x004A,
